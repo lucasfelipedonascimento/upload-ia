@@ -103,9 +103,11 @@ export function VideoInputForm(props: VideoInputFormProps) {
 
     setStatus("generating");
 
-    await api.post(`/videos/${videoId}/transcriptions`, {
+    console.log("videoId", videoId);
+    await api.post(`/videos/${videoId}/transcription`, {
       prompt,
     });
+    console.log("passei aqui");
 
     setStatus("success");
 
@@ -130,7 +132,7 @@ export function VideoInputForm(props: VideoInputFormProps) {
           <video
             src={previewURL}
             controls={false}
-            className="pointer-events-none absolute inset-0"
+            className="pointer-events-none absolute inset-0 max-h-full w-2/2"
           />
         ) : (
           <>

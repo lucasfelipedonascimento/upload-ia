@@ -8,7 +8,7 @@ POST http://localhost:3333/videos
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="audio.mp3"
+Content-Disposition: form-data; name="file"; filename="audio.mp4"
 Content-Type: audio/mpeg
 
 < ./audio.mp3
@@ -31,5 +31,5 @@ Content-Type: application/json
 {
   "videoId": "2465f875-05a9-4ba9-9270-2d9fbfd881d6",
   "temperature": 0.5,
-  "prompt": "Me retorne a letra da música enviada: '''{transcription}'''"
+  "prompt": "Me retorne a resposta: '''{transcription}'''"
 }
